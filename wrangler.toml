@@ -1,6 +1,6 @@
 name = "jieshun-training"
 compatibility_date = "2026-05-20"
-pages_build_output_dir = "code/dist"
+pages_build_output_dir = "dist"
 
 [build]
-command = "cd code && npm ci && npm run build"
+command = "npm ci && npm run build"
