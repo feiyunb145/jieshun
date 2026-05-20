@@ -42,8 +42,11 @@ const nodeLabels = {
   node_1: '开场白',
   node_2: '痛点确认',
   node_3: '方案介绍',
+  node_3_follow_B: '方案追问',
   node_4: '数据算账',
+  node_4_follow_A: '数据追问',
   node_5: '案例展示',
+  node_5_follow_B: '案例追问',
   node_6: '合作模式'
 }
 

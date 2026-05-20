@@ -20,6 +20,9 @@ const displayedText = ref('')
 const isTyping = ref(false)
 const isShaking = ref(false)
 const activeChoiceId = ref(null)
+const currentOnComplete = ref(null)
+const optionClickEmotion = ref(null)
+const THINKING_PAUSE = 1500
 
 const currentNodeIdRef = ref('cover')
 
@@ -39,6 +42,7 @@ const currentNode = computed(() => {
 })
 
 const currentEmotion = computed(() => {
+  if (optionClickEmotion.value) return optionClickEmotion.value
   const node = currentNode.value
   if (!node || !node.emotion) return 'normal'
   return node.emotion
@@ -65,33 +69,69 @@ function syncMirrorState() {
   syncEngineToRef()
 }
 
+function getTypeDelay(char, nextChar) {
+  const baseDelay = 45
+  const pauseMap = {
+    '。': 400,
+    '，': 250,
+    '！': 400,
+    '？': 400,
+    '；': 300,
+    '：': 200,
+    '…': 350,
+    '\n': 300,
+    '、': 150
+  }
+  if (pauseMap[char]) {
+    return baseDelay + pauseMap[char]
+  }
+  if (/[a-zA-Z0-9]/.test(char)) {
+    return 35
+  }
+  return baseDelay
+}
+
 function startTypewriter(text, onComplete) {
   isTyping.value = true
   displayedText.value = ''
+  currentOnComplete.value = onComplete
+
   let index = 0
-  clearInterval(typewriterTimer)
-  typewriterTimer = setInterval(() => {
+
+  function scheduleNext() {
+    if (!isTyping.value) return
     if (index < text.length) {
-      displayedText.value += text[index]
+      const char = text[index]
+      const nextChar = text[index + 1] || ''
+      displayedText.value += char
       index++
+      const delay = getTypeDelay(char, nextChar)
+      typewriterTimer = setTimeout(scheduleNext, delay)
     } else {
-      clearInterval(typewriterTimer)
-      typewriterTimer = null
-      isTyping.value = false
-      if (onComplete) onComplete()
+      // 全部打完，思考停顿 1.5s
+      typewriterTimer = setTimeout(() => {
+        isTyping.value = false
+        const cb = currentOnComplete.value
+        currentOnComplete.value = null
+        if (cb) cb()
+      }, THINKING_PAUSE)
     }
-  }, 50)
+  }
+
+  clearTimeout(typewriterTimer)
+  scheduleNext()
 }
 
 function skipTypewriter() {
   if (!isTyping.value) return
-  clearInterval(typewriterTimer)
+  clearTimeout(typewriterTimer)
   typewriterTimer = null
   const node = currentNode.value
   if (node && node.text) {
     displayedText.value = node.text
   }
   isTyping.value = false
+  currentOnComplete.value = null
 }
 
 function handleStart() {
@@ -119,6 +159,14 @@ function handleSelectChoice(choiceId, choiceType) {
     }, 300)
   }
 
+  // 点击选项后，角色表情与选项表情同步
+  const choiceEmotionMap = {
+    objection: 'questioned',
+    neutral: 'normal',
+    acceptance: 'confident'
+  }
+  optionClickEmotion.value = choiceEmotionMap[choiceType] || 'normal'
+
   const answerNode = engine.selectChoice(choiceId)
   syncMirrorState()
 
@@ -129,13 +177,11 @@ function handleSelectChoice(choiceId, choiceType) {
     return
   }
 
-  const savedNextNode = answerNode.nextNode || null
-
-  startTypewriter(answerNode.text || '', () => {
-    if (savedNextNode) {
-      handleAdvance()
-    }
-  })
+  // 延迟 1.5s 后清除选项表情，开始打字
+  setTimeout(() => {
+    optionClickEmotion.value = null
+    startTypewriter(answerNode.text || '')
+  }, THINKING_PAUSE)
 }
 
 function handleAdvance() {
@@ -147,11 +193,7 @@ function handleAdvance() {
       return
     }
     if (result.text) {
-      startTypewriter(result.text, () => {
-        if (result.nextNode) {
-          handleAdvance()
-        }
-      })
+      startTypewriter(result.text)
     }
   }
 }
@@ -169,11 +211,22 @@ function handleRestart() {
 function handleDialogueClick() {
   if (isTyping.value) {
     skipTypewriter()
+    return
+  }
+
+  const node = currentNode.value
+  if (node && !node.choices && node.nextNode) {
+    handleAdvance()
+    return
+  }
+
+  if (node && node.choices && node.choices.length > 0 && !isTyping.value) {
+    return
   }
 }
 
 onBeforeUnmount(() => {
-  clearInterval(typewriterTimer)
+  clearTimeout(typewriterTimer)
 })
 </script>
 
