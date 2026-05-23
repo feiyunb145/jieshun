@@ -42,15 +42,15 @@
             </svg>
           </div>
           <span class="card-tag">任务二</span>
-          <h2 class="card-title">To G 城市停车资产运营机会分析</h2>
-          <p class="card-desc">行业趋势、竞争格局与捷顺战略机会点深度解读</p>
+          <h2 class="card-title">V2G + 停充储一体化机会分析</h2>
+          <p class="card-desc">政策趋势、市场空间与捷顺的机会点</p>
           <span class="card-arrow">&rarr;</span>
         </router-link>
       </div>
 
       <!-- 底部署名 -->
       <footer class="footer">
-        <p>小组成员署名占位</p>
+        <p>2026捷顺产品应用岗培第二小组</p>
       </footer>
     </div>
   </div>
@@ -256,6 +256,10 @@
 
 /* ---- 响应式 ---- */
 @media (max-width: 768px) {
+  .home-content {
+    padding: 40px 20px;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -267,6 +271,72 @@
 
   .title {
     font-size: 24px;
+  }
+
+  .subtitle {
+    margin-bottom: 32px;
+  }
+
+  .task-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    padding: 32px 16px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  .logo-sub {
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+
+  .title {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .cards {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .task-card {
+    padding: 20px;
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+  }
+
+  .card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+  }
+
+  .footer {
+    font-size: 12px;
   }
 }
 </style>

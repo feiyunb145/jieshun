@@ -67,4 +67,22 @@ defineEmits(['navigate'])
   color: var(--tech-cyan);
   border-bottom-color: var(--tech-cyan);
 }
+
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 0 16px;
+  }
+
+  .nav-link {
+    padding: 12px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+}
 </style>

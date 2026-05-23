@@ -112,4 +112,36 @@ defineProps({
   font-weight: 700;
   color: var(--tech-cyan);
 }
+
+@media (max-width: 768px) {
+  .mode-card {
+    padding: 24px;
+  }
+
+  .mode-title {
+    font-size: 18px;
+  }
+
+  .revenue-value {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mode-card {
+    padding: 18px;
+  }
+
+  .mode-title {
+    font-size: 16px;
+  }
+
+  .mode-features li {
+    font-size: 13px;
+  }
+
+  .revenue-value {
+    font-size: 16px;
+  }
+}
 </style>

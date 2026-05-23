@@ -303,4 +303,83 @@ function getChoiceTypeLabel(type) {
   background: var(--white-15);
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .ending-screen {
+    padding: 32px 16px;
+  }
+
+  .ending-title {
+    font-size: 28px;
+  }
+
+  .ending-emoji {
+    font-size: 48px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+
+  .stats-bar {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ending-screen {
+    padding: 24px 12px;
+  }
+
+  .ending-content {
+    max-width: 100%;
+  }
+
+  .ending-title {
+    font-size: 24px;
+  }
+
+  .ending-emoji {
+    font-size: 40px;
+  }
+
+  .ending-desc {
+    font-size: 14px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+
+  .stats-bar {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .negotiation-log {
+    padding: 14px;
+  }
+
+  .log-item {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px 10px;
+  }
+
+  .log-label {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .ending-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-restart,
+  .btn-home {
+    width: 100%;
+    padding: 12px 24px;
+  }
+}
 </style>

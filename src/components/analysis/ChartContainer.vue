@@ -32,12 +32,17 @@ onMounted(() => {
   chartInstance.value = echarts.init(el)
 
   if (props.option) {
-    chartInstance.value.setOption(props.option)
+    chartInstance.value.setOption(applyResponsiveGrid(props.option))
   }
 
   emit('chart-ready', chartInstance.value)
 
-  const resizeHandler = () => chartInstance.value?.resize()
+  const resizeHandler = () => {
+    if (props.option) {
+      chartInstance.value.setOption(applyResponsiveGrid(props.option))
+    }
+    chartInstance.value?.resize()
+  }
   window.addEventListener('resize', resizeHandler)
 
   onBeforeUnmount(() => {
@@ -45,6 +50,21 @@ onMounted(() => {
     chartInstance.value?.dispose()
   })
 })
+
+function applyResponsiveGrid(option) {
+  const w = window.innerWidth
+  if (w > 768) return option
+  const grid = { ...option.grid }
+  if (w <= 480) {
+    grid.left = Math.min(grid.left || 60, 40)
+    grid.right = Math.min(grid.right || 30, 20)
+    grid.top = Math.min(grid.top || 50, 40)
+  } else {
+    grid.left = Math.min(grid.left || 60, 50)
+    grid.right = Math.min(grid.right || 30, 25)
+  }
+  return { ...option, grid }
+}
 
 function setOption(opt) {
   chartInstance.value?.setOption(opt)
@@ -59,5 +79,17 @@ defineExpose({ setOption, chartInstance })
   background: var(--white-03);
   border: 1px solid var(--white-06);
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    min-height: 250px;
+  }
 }
 </style>

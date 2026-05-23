@@ -46,4 +46,28 @@ defineProps({
   font-size: 14px;
   color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 18px;
+  }
+
+  .number {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    padding: 14px;
+  }
+
+  .number {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+}
 </style>

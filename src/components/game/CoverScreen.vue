@@ -132,4 +132,63 @@ defineEmits(['start'])
 .start-btn:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 768px) {
+  .cover-content {
+    padding: 32px 20px;
+  }
+
+  .cover-title {
+    font-size: 32px;
+  }
+
+  .cover-subtitle {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .cover-intro {
+    padding: 18px;
+    margin-bottom: 28px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+  }
+
+  .start-btn {
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-content {
+    padding: 24px 16px;
+  }
+
+  .cover-title {
+    font-size: 26px;
+  }
+
+  .cover-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .cover-intro {
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .start-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}
 </style>

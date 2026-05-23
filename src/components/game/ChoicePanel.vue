@@ -102,4 +102,24 @@ function handleClick(choice) {
 .choice-btn.choice-active {
   animation: shake 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .choice-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .choice-panel {
+    gap: 8px;
+    padding: 8px 0 12px;
+  }
+
+  .choice-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
 </style>

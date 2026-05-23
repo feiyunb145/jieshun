@@ -78,4 +78,28 @@ defineProps({
   color: var(--text-secondary);
   margin: 0;
 }
+
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-dot {
+    left: -21px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline-content {
+    padding: 12px 14px;
+  }
+
+  .timeline-label {
+    font-size: 13px;
+  }
+
+  .timeline-text {
+    font-size: 13px;
+  }
+}
 </style>

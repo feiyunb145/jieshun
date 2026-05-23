@@ -1,15 +1,15 @@
 <template>
   <section id="hero" class="hero-section" data-section="hero">
     <div class="hero-content">
-      <h1 class="hero-title">城市停车资产运营服务商</h1>
-      <p class="hero-subtitle">从卖铲子到承包矿山</p>
+      <h1 class="hero-title">V2G + 停充储一体化</h1>
+      <p class="hero-subtitle">一个关于V2G的行业机会研究</p>
       <div class="stat-grid">
-        <StatCard value="8000万+" label="全国车位缺口" />
-        <StatCard value="40%" label="存量泊位平均利用率" />
-        <StatCard value="54.78%" label="捷顺创新业务新签订单增速" />
+        <StatCard value="9个" label="首批V2G试点城市" />
+        <StatCard value="4397万辆" label="2025年底新能源汽车保有量" />
+        <StatCard value="102亿元" label="2025年虚拟电厂市场规模" />
       </div>
       <p class="guide-text">
-        停车产业正从"卖设备"走向"经营资产"。谁能率先完成从硬件商到运营商的转型，谁就能占据下一个十年的制高点。
+        在学习捷顺产品知识的过程中，我们注意到V2G（车网互动）正在从概念走向落地。这会不会是捷顺的一个新方向？
       </p>
     </div>
   </section>
@@ -98,6 +98,50 @@ import StatCard from './StatCard.vue'
   }
   100% {
     background-position: 60px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .guide-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .guide-text {
+    font-size: 13px;
+    line-height: 1.7;
   }
 }
 </style>

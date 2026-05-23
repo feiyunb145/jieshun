@@ -306,4 +306,16 @@ onBeforeUnmount(() => {
   width: 100%;
   max-width: 700px;
 }
+
+@media (max-width: 768px) {
+  .dialogue-scene {
+    padding: 24px 12px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dialogue-scene {
+    padding: 16px 8px 8px;
+  }
+}
 </style>

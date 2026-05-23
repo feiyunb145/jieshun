@@ -125,4 +125,24 @@ watch(() => props.emotion, (newEmotion) => {
   background: linear-gradient(180deg, #C0392B, #E74C3C);
   clip-path: polygon(50% 0%, 100% 25%, 50% 100%, 0% 25%);
 }
+
+@media (max-width: 480px) {
+  .character-sprite {
+    margin-bottom: 12px;
+  }
+
+  .head {
+    width: 48px;
+    height: 48px;
+  }
+
+  .face-emoji {
+    font-size: 22px;
+  }
+
+  .body-suit {
+    width: 60px;
+    height: 44px;
+  }
+}
 </style>

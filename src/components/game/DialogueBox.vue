@@ -64,4 +64,29 @@ defineEmits(['typingComplete'])
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+@media (max-width: 768px) {
+  .dialogue-box {
+    padding: 12px 16px 16px;
+  }
+
+  .speaker-name {
+    font-size: 14px;
+  }
+
+  .dialogue-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dialogue-box {
+    padding: 10px 12px 14px;
+  }
+
+  .dialogue-text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
 </style>
