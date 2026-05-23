@@ -20,17 +20,10 @@ defineProps({
 
 <style scoped>
 .stat-card {
-  background: var(--brand-blue-10);
-  border: 1px solid var(--brand-blue-30);
+  background: var(--brand-blue-08);
   border-radius: 12px;
   padding: 24px;
   text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px var(--brand-blue-30);
 }
 
 .number {
@@ -59,11 +52,11 @@ defineProps({
 
 @media (max-width: 480px) {
   .stat-card {
-    padding: 14px;
+    padding: 16px;
   }
 
   .number {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .label {

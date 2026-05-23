@@ -26,7 +26,7 @@
               <path d="M18 10v4"/>
             </svg>
           </div>
-          <span class="card-tag">任务一</span>
+          <span class="card-tag">成果一</span>
           <h2 class="card-title">车场老板的谈判挑战</h2>
           <p class="card-desc">对话式文字冒险游戏 -- 模拟向车场老板推销捷顺云托管方案</p>
           <span class="card-arrow">&rarr;</span>
@@ -41,7 +41,7 @@
               <line x1="2" y1="20" x2="22" y2="20"/>
             </svg>
           </div>
-          <span class="card-tag">任务二</span>
+          <span class="card-tag">成果二</span>
           <h2 class="card-title">V2G + 停充储一体化机会分析</h2>
           <p class="card-desc">政策趋势、市场空间与捷顺的机会点</p>
           <span class="card-arrow">&rarr;</span>

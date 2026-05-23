@@ -34,9 +34,9 @@ defineEmits(['navigate'])
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg-dark-95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--white-06);
+  background: rgba(10, 22, 40, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-inner {
@@ -44,19 +44,21 @@ defineEmits(['navigate'])
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   overflow-x: auto;
 }
 
 .nav-link {
   display: inline-block;
-  padding: 14px 18px;
+  padding: 14px 20px;
   font-size: 14px;
+  font-weight: 600;
   color: var(--text-secondary);
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.2s ease;
-  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 3px solid transparent;
+  letter-spacing: 0.5px;
 }
 
 .nav-link:hover {
@@ -69,20 +71,30 @@ defineEmits(['navigate'])
 }
 
 @media (max-width: 768px) {
+  .sticky-nav {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+
   .nav-inner {
     padding: 0 16px;
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 14px 14px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: 0 12px;
   }
 
   .nav-link {
     padding: 12px 12px;
     font-size: 13px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-link {
-    padding: 10px 10px;
-    font-size: 12px;
   }
 }
 </style>
