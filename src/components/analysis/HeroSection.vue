@@ -8,9 +8,6 @@
         <StatCard value="4397万辆" label="2025年底新能源汽车保有量" />
         <StatCard value="102亿元" label="2025年虚拟电厂市场规模" />
       </div>
-      <p class="guide-text">
-        本报告基于公开行业资料，梳理V2G技术发展趋势与捷顺科技在该方向的能力基础，为业务决策提供参考。
-      </p>
     </div>
   </section>
 </template>
