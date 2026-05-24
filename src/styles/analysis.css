@@ -76,24 +76,35 @@
   text-align: center;
 }
 
-.analysis-page .analysis-footer blockquote {
-  font-size: 22px;
+.analysis-page .analysis-footer .footer-title {
+  font-size: 28px;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0 auto 24px;
-  max-width: 700px;
-  line-height: 1.6;
-  border-left: 3px solid var(--brand-blue);
-  padding-left: 20px;
-  text-align: left;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.analysis-page .analysis-footer .footer-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0 0 32px;
+  font-weight: 400;
+}
+
+.analysis-page .analysis-footer .footer-body {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .analysis-page .analysis-footer .footer-text {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto 32px;
+  margin-bottom: 20px;
+}
+
+.analysis-page .analysis-footer .footer-text:last-child {
+  margin-bottom: 32px;
 }
 
 .analysis-page .analysis-footer .footer-link {

@@ -42,7 +42,8 @@ export function createVppMarketOption() {
     tooltip: {
       ...DARK_TOOLTIP,
       trigger: 'axis',
-      axisPointer: { type: 'cross' }
+      triggerOn: 'mousemove|touchstart',
+      axisPointer: { type: 'cross', snap: true }
     },
     legend: {
       data: ['市场规模（亿元）', '增长率（%）'],
@@ -87,7 +88,15 @@ export function createVppMarketOption() {
           ]),
           borderRadius: [4, 4, 0, 0]
         },
-        barWidth: '40%'
+        barWidth: '40%',
+        emphasis: {
+          itemStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: CHART_COLORS.cyan },
+              { offset: 1, color: CHART_COLORS.blue }
+            ])
+          }
+        }
       },
       {
         name: '增长率（%）',
@@ -98,7 +107,21 @@ export function createVppMarketOption() {
         lineStyle: { color: CHART_COLORS.orange, width: 2 },
         itemStyle: { color: CHART_COLORS.orange },
         symbol: 'circle',
-        symbolSize: 6
+        symbolSize: 8,
+        emphasis: {
+          symbolSize: 12,
+          lineStyle: { width: 3 }
+        },
+        markPoint: {
+          data: growthRate.map((v, i) => ({
+            coord: [years[i], v],
+            value: v !== null ? v.toFixed(1) + '%' : '',
+            symbol: 'emptyCircle',
+            symbolSize: 10,
+            itemStyle: { color: CHART_COLORS.orange, borderWidth: 2 }
+          })).filter(d => d.value),
+          label: { show: false }
+        }
       }
     ]
   }
@@ -109,7 +132,8 @@ export function createCapabilityRadarOption() {
   return {
     backgroundColor: 'transparent',
     tooltip: {
-      ...DARK_TOOLTIP
+      ...DARK_TOOLTIP,
+      triggerOn: 'mousemove|touchstart'
     },
     radar: {
       indicator: [
@@ -152,8 +176,15 @@ export function createCapabilityRadarOption() {
           width: 2
         },
         itemStyle: {
-          color: CHART_COLORS.cyan
-        }
+          color: CHART_COLORS.cyan,
+          borderWidth: 2
+        },
+        emphasis: {
+          lineStyle: { width: 3 },
+          itemStyle: { borderWidth: 3 }
+        },
+        symbol: 'circle',
+        symbolSize: 8
       }]
     }]
   }

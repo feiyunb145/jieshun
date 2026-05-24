@@ -43,10 +43,6 @@
           </div>
         </div>
 
-        <p class="section-body insight-box">
-          综合以上数据：政策推动已落地、新能源汽车保有量达到规模化阈值、峰谷价差创造了经济可行性。停车场作为电动汽车停留时间最长的场景，与V2G资源聚合天然相关。
-        </p>
-
         <ChartContainer chart-id="chart-vpp-market" :option="vppMarketOption" />
 
         <Timeline :items="policyTimeline" />
@@ -90,10 +86,6 @@
             <p>利用现有停车场和充电桩进行改造，不需要大规模新建基础设施。常州的实践表明，将普通车桩改造为交流V2G充电桩，费用可控制在<span class="highlight">1000元以内</span>。</p>
           </div>
         </div>
-
-        <p class="section-body insight-box">
-          V2G并非从零起步，而是捷顺"停充储一体化"能力的延伸方向，政策推动加速了这一进程。
-        </p>
       </div>
     </section>
 
@@ -145,22 +137,21 @@
         </div>
 
         <ChartContainer chart-id="chart-capability-radar" :option="capabilityRadarOption" />
-
-        <p class="section-body insight-box">
-          基于公开资料的梳理，捷顺在场景覆盖、数据积累、硬件能力和运营经验方面具备一定基础。以上分析基于公开信息，仅供参考。
-        </p>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="analysis-footer">
-      <blockquote>「从停车服务商到能源聚合服务商——一个可能的方向。」</blockquote>
-      <p class="footer-text">
-        任务一学习了捷顺"云托管+车位代运营"如何帮助车场降本增收。在此基础上，进一步思考：将分散在停车场的电动汽车聚合起来，参与城市电网调峰和电力市场交易，是否具有可行性。
-      </p>
-      <p class="footer-text">
-        以上分析基于公开资料，不构成商业计划建议。V2G + 停充储一体化可能是捷顺从"停车服务商"向"能源聚合服务商"延伸的一个值得进一步研究的方向。
-      </p>
+      <h2 class="footer-title">从停车服务商到能源聚合服务商</h2>
+      <p class="footer-subtitle">一个可能的方向</p>
+      <div class="footer-body">
+        <p class="footer-text">
+          任务一我们了解了捷顺"云托管+车位代运营"的解决方案如何帮助车场降本增收。基于此，我们在进一步思考：将分散在停车场的电动汽车聚合起来，参与城市电网调峰和电力市场交易，是否具有可行性？
+        </p>
+        <p class="footer-text">
+          以上分析均基于公开资料。V2G + 停充储一体化我们认为是捷顺作为"停车服务商"向"能源聚合服务商"发展的方向。
+        </p>
+      </div>
       <router-link to="/" class="footer-link">返回导航首页</router-link>
     </footer>
   </div>
