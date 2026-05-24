@@ -7,44 +7,44 @@
     <!-- 行业趋势 -->
     <section id="discovery" data-section="discovery">
       <div class="section-inner">
-        <h2 class="section-title">行业正在发生什么</h2>
-        <p class="section-subtitle">政策、车、电——三条线同时走到一个交汇点</p>
+        <h2 class="section-title">行业趋势</h2>
+        <p class="section-subtitle">政策推动、市场增长与V2G规模化</p>
 
         <p class="section-body">
-          梳理公开的行业资料后，我们注意到三个趋势几乎同时成熟了：
+          基于公开的行业资料，V2G（Vehicle-to-Grid，车辆到电网）正处于政策推动与市场增长交汇的阶段。以下为三个关键趋势：
         </p>
 
         <div class="trend-list">
           <div class="trend-item">
-            <h4>政策从"研究"变成"推动"</h4>
+            <h4>政策从研究转向推动</h4>
             <ul>
-              <li>2023年底，四部门联合发布《加强新能源汽车与电网融合互动的实施意见》，第一次把V2G写进了顶层设计</li>
+              <li>2023年底，四部门联合发布《加强新能源汽车与电网融合互动的实施意见》，首次从顶层设计确立V2G战略地位</li>
               <li>2025年4月，首批<span class="highlight">9个试点城市</span>（上海、常州、合肥、淮北、广州、深圳、海口、重庆、昆明）和<span class="highlight">30个试点项目</span>正式公布</li>
-              <li>国家要求2025年前完成V2G关键技术标准制修订，节奏比预期快</li>
+              <li>国家明确要求2025年前完成V2G关键技术标准制修订</li>
             </ul>
           </div>
 
           <div class="trend-item">
-            <h4>4397万辆车，就是4397万个移动电池</h4>
+            <h4>新能源汽车成为移动储能资源</h4>
             <ul>
-              <li>2025年底全国新能源汽车保有量达<span class="highlight">4397万辆</span>，已经是全球最大的移动储能资源</li>
-              <li>私家车平均每天停超过20小时——车停在停车场的时候，电池基本是闲着的</li>
-              <li>深圳实测：新能源汽车车载电池储能潜力可达<span class="highlight">5000万度</span>，相当于5台中型燃煤发电机组</li>
+              <li>2025年底全国新能源汽车保有量达<span class="highlight">4397万辆</span>，构成全球规模最大的移动储能资源</li>
+              <li>私家车平均每天停放超过20小时，停车场为V2G资源聚合的主要场景</li>
+              <li>深圳实测：新能源汽车车载电池储能潜力可达<span class="highlight">5000万度</span>，相当于5台中型燃煤发电机组的储能规模</li>
             </ul>
           </div>
 
           <div class="trend-item">
-            <h4>虚拟电厂从试点走向规模化</h4>
+            <h4>虚拟电厂市场快速增长</h4>
             <ul>
-              <li>2025年虚拟电厂市场规模约<span class="highlight">102亿元</span>，预计2030年达千亿元</li>
-              <li>电力市场化改革推进，峰谷价差越拉越大（广东珠三角达<span class="highlight">1.28元/千瓦时</span>），低充高放的套利空间开始出现</li>
+              <li>2025年虚拟电厂市场规模约<span class="highlight">102亿元</span>，预计2030年达到千亿元</li>
+              <li>电力市场化改革推进，峰谷价差扩大（广东珠三角达<span class="highlight">1.28元/千瓦时</span>），低充高放的套利空间出现</li>
               <li>虚拟电厂聚合调节能力目标：2027年2000万千瓦以上，2030年5000万千瓦以上</li>
             </ul>
           </div>
         </div>
 
         <p class="section-body insight-box">
-          说白了：政策在推、车够多了、电价差也出来了。V2G不再是PPT里的概念，而是正在发生的事。而停车场是电动车停留时间最长的地方——这跟捷顺的业务直接相关。
+          综合以上数据：政策推动已落地、新能源汽车保有量达到规模化阈值、峰谷价差创造了经济可行性。停车场作为电动汽车停留时间最长的场景，与V2G资源聚合天然相关。
         </p>
 
         <ChartContainer chart-id="chart-vpp-market" :option="vppMarketOption" />
@@ -56,43 +56,43 @@
     <!-- 机会分析 -->
     <section id="opportunity" data-section="opportunity">
       <div class="section-inner">
-        <h2 class="section-title">这跟捷顺有什么关系</h2>
-        <p class="section-subtitle">不是另起炉灶，是现有能力的延伸</p>
+        <h2 class="section-title">机会分析</h2>
+        <p class="section-subtitle">V2G与捷顺现有业务的衔接点</p>
 
         <p class="section-body">
-          任务一里我们学了捷顺的"云托管"和"车位代运营"。顺着这个思路看，V2G跟捷顺现有业务其实有不少衔接点：
+          基于任务一学习的捷顺产品知识，V2G与捷顺现有业务存在以下衔接点：
         </p>
 
         <div class="opp-grid">
           <div class="opp-card">
             <span class="opp-tag">窗口期</span>
-            <h4>政策窗口期真实存在</h4>
-            <p>首批9个试点城市已经启动，未来2-3年可能是布局的关键期。先进去的人会积累数据、建立政府信任、形成网络效应，后来的人可能只能做"补充接入"。</p>
+            <h4>政策窗口期</h4>
+            <p>首批9个试点城市已启动，未来2-3年可能是布局的关键期。先进入者将积累数据、建立政府信任、形成网络效应。</p>
           </div>
 
           <div class="opp-card">
             <span class="opp-tag">三方共赢</span>
-            <h4>电网、车主、政府都有动力</h4>
-            <p><strong>电网：</strong>需要分布式调峰资源，V2G响应速度是秒级的，比传统火电调峰快得多<br>
-            <strong>车主：</strong>深圳实测，反向送电每度能赚<span class="highlight">4元</span>，跟低谷充电成本之间有明显的价差<br>
-            <strong>政府：</strong>"双碳"目标摆在那，需要能落地的绿色能源方案</p>
+            <h4>多方受益</h4>
+            <p><strong>电网：</strong>需要分布式调峰资源，V2G响应速度为秒级<br>
+            <strong>车主：</strong>深圳实测反向送电每度收益<span class="highlight">4元</span>，与低谷充电成本存在价差<br>
+            <strong>政府：</strong>"双碳"目标需要可量化的绿色能源方案</p>
           </div>
 
           <div class="opp-card">
             <span class="opp-tag">业务协同</span>
-            <h4>"停充储"已经铺了，V2G是加模块</h4>
-            <p>任务一里我们学了捷顺的"停充储一体化"方案：停车场+充电桩+储能柜。V2G只需要在现有基础上增加"双向充放电"能力，不是从零开始。捷顺已经在深圳、广州等试点城市布局了"停充储"，升级V2G是"加模块"不是"建体系"。</p>
+            <h4>与"停充储一体化"协同</h4>
+            <p>捷顺已布局"停充储一体化"方案：停车场+充电桩+储能柜。V2G在此基础上增加"双向充放电"能力即可，无需从零建设。捷顺已在深圳、广州等试点城市布局了"停充储"设施。</p>
           </div>
 
           <div class="opp-card">
             <span class="opp-tag">轻资产</span>
-            <h4>改造就行，不用大建</h4>
-            <p>利用现有的停车场和充电桩改造，不需要大规模新建基础设施。常州的实践表明，把普通车桩改成交流V2G充电桩，费用可以压到<span class="highlight">1000元以内</span>。</p>
+            <h4>改造成本较低</h4>
+            <p>利用现有停车场和充电桩进行改造，不需要大规模新建基础设施。常州的实践表明，将普通车桩改造为交流V2G充电桩，费用可控制在<span class="highlight">1000元以内</span>。</p>
           </div>
         </div>
 
         <p class="section-body insight-box">
-          所以V2G不是在追风口——捷顺的"停充储一体化"本身就在往这个方向走，政策只是加速了这个进程。
+          V2G并非从零起步，而是捷顺"停充储一体化"能力的延伸方向，政策推动加速了这一进程。
         </p>
       </div>
     </section>
@@ -100,54 +100,54 @@
     <!-- 捷顺能力 -->
     <section id="capability" data-section="capability">
       <div class="section-inner">
-        <h2 class="section-title">捷顺做V2G，有什么基础</h2>
-        <p class="section-subtitle">场景、数据、硬件、运营——不是从零开始</p>
+        <h2 class="section-title">捷顺的能力基础</h2>
+        <p class="section-subtitle">场景、数据、硬件、运营资源梳理</p>
 
         <p class="section-body">
-          基于公开资料，我们梳理了捷顺可能具备的几项能力：
+          基于公开资料，捷顺在V2G方向可能具备以下能力基础：
         </p>
 
         <div class="cap-grid">
           <div class="cap-item">
             <span class="cap-num">01</span>
-            <h4>5万个停车场的场景优势</h4>
-            <p class="cap-subtitle">停车场是V2G落地的天然点位</p>
-            <p>捷顺在全国管理超过<span class="highlight">5万个停车场</span>，覆盖社区、园区、商业体等场景。私家车在这些地方停的时间最长，是装V2G桩最合适的位置。相比纯充电运营商，捷顺有停车资产的运营权或长期管理权，不用一个一个去谈。</p>
+            <h4>停车场场景覆盖</h4>
+            <p class="cap-subtitle">V2G落地的天然点位</p>
+            <p>捷顺在全国管理超过<span class="highlight">5万个停车场</span>，覆盖社区、园区、商业体等场景。私家车在这些场景停留时间最长，是部署V2G桩的合适位置。相比纯充电运营商，捷顺拥有停车资产的运营权或长期管理权，无需逐一谈判。</p>
           </div>
 
           <div class="cap-item">
             <span class="cap-num">02</span>
-            <h4>停车+充电双重数据</h4>
-            <p class="cap-subtitle">知道车什么时候来、停多久、充多少</p>
-            <p>捷停车平台覆盖<span class="highlight">1.3亿+车主用户</span>，掌握进出场时间、停留时长、月卡类型等停车行为数据，同时也在积累充电行为数据。虚拟电厂需要提前24小时预测可调度容量，"停车+充电"数据交叉有可能提升预测精度。</p>
+            <h4>停车与充电双重数据</h4>
+            <p class="cap-subtitle">预测可调度的基础</p>
+            <p>捷停车平台覆盖<span class="highlight">1.3亿+车主用户</span>，掌握进出场时间、停留时长、月卡类型等停车行为数据，同时积累充电行为数据。虚拟电厂需要提前24小时预测可调度容量，"停车+充电"数据交叉可能提升预测精度。</p>
           </div>
 
           <div class="cap-item">
             <span class="cap-num">03</span>
             <h4>硬件自研能力</h4>
-            <p class="cap-subtitle">道闸、检测器、EMS都是自己的</p>
-            <p>捷顺有道闸、车位检测器、车牌识别等自研硬件能力，也自主研发了EMS能量管理系统、协调控制器、储能变流器。理论上可以做到"识别车位占用→决定是否允许充放电→动态调节功率"的闭环。</p>
+            <p class="cap-subtitle">闭环控制的基础</p>
+            <p>捷顺拥有道闸、车位检测器、车牌识别等自研硬件能力，并自主研发了EMS能量管理系统、协调控制器、储能变流器。理论上可实现"识别车位占用→决定是否允许充放电→动态调节功率"的闭环。</p>
           </div>
 
           <div class="cap-item">
             <span class="cap-num">04</span>
-            <h4>停充储已经跑起来了</h4>
-            <p class="cap-subtitle">不是PPT，是已经落地的数据</p>
-            <p>储能落地超百台（总容量<span class="highlight">26.45MWh</span>），充电桩突破<span class="highlight">1万个</span>。社区充电利用率平均<span class="highlight">20%</span>，行业平均才4%左右。"停充联动"的运营模型已经跑通了。</p>
+            <h4>停充储运营数据</h4>
+            <p class="cap-subtitle">已验证的运营模型</p>
+            <p>储能落地超百台（总容量<span class="highlight">26.45MWh</span>），充电桩突破<span class="highlight">1万个</span>。社区充电利用率平均<span class="highlight">20%</span>，行业平均约4%。"停充联动"运营模型已验证有效。</p>
           </div>
 
           <div class="cap-item">
             <span class="cap-num">05</span>
-            <h4>创新业务增速说明公司能转型</h4>
-            <p class="cap-subtitle">从卖硬件到卖服务，已经验证过一次</p>
-            <p>创新业务新签订单<span class="highlight">19.80亿元</span>（同比+54.78%），收入占比首次突破<span class="highlight">50%</span>。公司从传统硬件销售转向"硬件+平台+运营+能源服务"，这条路已经走了一半了。</p>
+            <h4>创新业务增长</h4>
+            <p class="cap-subtitle">转型能力验证</p>
+            <p>创新业务新签订单<span class="highlight">19.80亿元</span>（同比+54.78%），收入占比首次突破<span class="highlight">50%</span>。公司从传统硬件销售向"硬件+平台+运营+能源服务"转型的能力已得到验证。</p>
           </div>
         </div>
 
         <ChartContainer chart-id="chart-capability-radar" :option="capabilityRadarOption" />
 
         <p class="section-body insight-box">
-          当然，这只是我们基于公开资料做的梳理，不是确定的结论。但场景+数据+硬件+运营的组合，确实让捷顺在V2G方向上有一定基础，值得进一步研究。
+          基于公开资料的梳理，捷顺在场景覆盖、数据积累、硬件能力和运营经验方面具备一定基础。以上分析基于公开信息，仅供参考。
         </p>
       </div>
     </section>
@@ -156,10 +156,10 @@
     <footer class="analysis-footer">
       <blockquote>「从停车服务商到能源聚合服务商——一个可能的方向。」</blockquote>
       <p class="footer-text">
-        任务一里，我们学了捷顺"云托管+车位代运营"怎么帮单个车场降本增收。任务二里，我们顺着这个思路往下看——如果把这些分散在停车场的电动汽车聚合起来，参与城市电网调峰和电力市场交易呢？
+        任务一学习了捷顺"云托管+车位代运营"如何帮助车场降本增收。在此基础上，进一步思考：将分散在停车场的电动汽车聚合起来，参与城市电网调峰和电力市场交易，是否具有可行性。
       </p>
       <p class="footer-text">
-        这不是一份成熟的商业计划。只是作为刚入职的培训生，在学完公司产品知识后，觉得V2G + 停充储一体化可能是捷顺从"停车服务商"往"能源聚合服务商"延伸的一个值得探索的方向。
+        以上分析基于公开资料，不构成商业计划建议。V2G + 停充储一体化可能是捷顺从"停车服务商"向"能源聚合服务商"延伸的一个值得进一步研究的方向。
       </p>
       <router-link to="/" class="footer-link">返回导航首页</router-link>
     </footer>

@@ -2,14 +2,14 @@
   <section id="hero" class="hero-section" data-section="hero">
     <div class="hero-content">
       <h1 class="hero-title">V2G + 停充储一体化</h1>
-      <p class="hero-subtitle">一个关于V2G的行业机会研究</p>
+      <p class="hero-subtitle">捷顺V2G + 停充储一体化机会分析</p>
       <div class="stat-grid">
         <StatCard value="9个" label="首批V2G试点城市" />
         <StatCard value="4397万辆" label="2025年底新能源汽车保有量" />
         <StatCard value="102亿元" label="2025年虚拟电厂市场规模" />
       </div>
       <p class="guide-text">
-        在学习捷顺产品知识的过程中，我们注意到V2G（车网互动）正在从概念走向落地。这会不会是捷顺的一个新方向？
+        本报告基于公开行业资料，梳理V2G技术发展趋势与捷顺科技在该方向的能力基础，为业务决策提供参考。
       </p>
     </div>
   </section>
